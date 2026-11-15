@@ -1,0 +1,225 @@
+.hug-container{
+
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:40px 20px;
+background:linear-gradient(180deg,#081522,#102944,#0a1626);
+
+}
+
+.hug-circle{
+
+width:170px;
+height:170px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:80px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.12);
+box-shadow:0 20px 50px rgba(0,0,0,.35);
+margin-bottom:30px;
+
+}
+
+.hug-container h1{
+
+color:#fff;
+font-size:3rem;
+margin-bottom:10px;
+text-align:center;
+
+}
+
+.hug-subtitle{
+
+color:#d8d8d8;
+font-size:1.05rem;
+margin-bottom:35px;
+text-align:center;
+max-width:600px;
+line-height:1.7;
+
+}
+
+.hug-btn{
+
+padding:16px 36px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+font-size:1rem;
+font-weight:600;
+background:linear-gradient(135deg,#FFD166,#FF8FAB);
+transition:.3s;
+
+}
+
+.hug-btn:hover{
+
+transform:translateY(-3px) scale(1.04);
+
+}
+
+.hug-card{
+
+margin-top:40px;
+width:750px;
+max-width:95%;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+border-radius:25px;
+padding:35px;
+text-align:center;
+border:1px solid rgba(255,255,255,.08);
+box-shadow:0 20px 60px rgba(0,0,0,.35);
+
+}
+
+.hug-emoji{
+
+font-size:70px;
+margin-bottom:15px;
+
+}
+
+.hug-card h2{
+
+color:#FFD166;
+font-size:2rem;
+margin-bottom:20px;
+
+}
+
+.hug-intensity{
+
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+color:#fff;
+font-size:1.15rem;
+margin-bottom:25px;
+
+}
+
+.hug-intensity span{
+
+font-size:2rem;
+font-weight:700;
+color:#FFD166;
+
+}
+
+.hug-message{
+
+background:rgba(255,255,255,.06);
+padding:22px;
+border-radius:18px;
+margin-bottom:25px;
+
+}
+
+.hug-message p{
+
+color:#fff;
+line-height:1.9;
+font-size:1.05rem;
+margin:10px 0;
+
+}
+
+.hug-footer{
+
+color:#d9d9d9;
+font-style:italic;
+margin-bottom:30px;
+
+}
+
+.hug-buttons{
+
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+
+}
+
+.hug-buttons button{
+
+padding:14px 28px;
+border:none;
+border-radius:40px;
+cursor:pointer;
+font-weight:600;
+background:linear-gradient(135deg,#FFD166,#FF8FAB);
+transition:.3s;
+
+}
+
+.hug-buttons button:hover{
+
+transform:translateY(-4px) scale(1.05);
+
+}
+
+@media(max-width:768px){
+
+.hug-container{
+
+padding:30px 18px;
+
+}
+
+.hug-circle{
+
+width:140px;
+height:140px;
+font-size:65px;
+
+}
+
+.hug-container h1{
+
+font-size:2.2rem;
+
+}
+
+.hug-card{
+
+padding:25px 18px;
+
+}
+
+.hug-card h2{
+
+font-size:1.6rem;
+
+}
+
+.hug-intensity{
+
+flex-direction:column;
+gap:5px;
+
+}
+
+.hug-buttons{
+
+flex-direction:column;
+
+}
+
+.hug-buttons button{
+
+width:100%;
+
+}
+
+}

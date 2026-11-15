@@ -1,0 +1,1040 @@
+.promise-page {
+
+  min-height: 100vh;
+
+  padding: 70px 6% 100px;
+
+  position: relative;
+
+  overflow-x: hidden;
+
+  box-sizing: border-box;
+
+  /*
+    OLD MEMORY WALL
+  */
+
+  background:
+
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(255,255,255,.16),
+      transparent 25%
+    ),
+
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(120,75,35,.12),
+      transparent 30%
+    ),
+
+    repeating-linear-gradient(
+      0deg,
+      rgba(70,45,25,.035) 0px,
+      rgba(70,45,25,.035) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+
+    linear-gradient(
+      135deg,
+      #c8a77a,
+      #b89568 45%,
+      #c3a074
+    );
+
+  color: #2b2118;
+}
+
+
+/*
+  WALL TEXTURE + VIGNETTE
+*/
+
+.promise-background {
+
+  position: fixed;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  background:
+
+    radial-gradient(
+      ellipse at center,
+      transparent 35%,
+      rgba(55,35,18,.18) 100%
+    );
+
+}
+
+
+/*
+  SUBTLE WOOD / WALL GRAIN
+*/
+
+.promise-page::before {
+
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  opacity: .22;
+
+  background:
+
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 6px,
+      rgba(80,55,30,.08) 7px,
+      transparent 9px
+    );
+
+  mix-blend-mode: multiply;
+}
+
+
+/*
+  SMALL RANDOM WALL DETAILS
+*/
+
+.promise-page::after {
+
+  content: "";
+
+  position: fixed;
+
+  width: 280px;
+
+  height: 280px;
+
+  right: -100px;
+
+  top: 120px;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.08),
+      transparent 65%
+    );
+
+}
+
+
+/* HEADER */
+
+.promise-header {
+
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+
+  max-width: 700px;
+
+  margin: 0 auto 35px;
+}
+
+
+.promise-header h1 {
+
+  margin: 0 0 15px;
+
+  font-size: clamp(
+    2.3rem,
+    5vw,
+    3.6rem
+  );
+
+  color: #342416;
+
+  text-shadow:
+    0 2px 1px
+    rgba(255,255,255,.25);
+}
+
+
+.promise-header > p:last-child {
+
+  margin: 0;
+
+  color:
+    rgba(48,35,22,.72);
+
+  line-height: 1.8;
+
+  font-size: 1.05rem;
+}
+
+
+.promise-eyebrow {
+
+  margin: 0 0 12px;
+
+  font-size: .72rem;
+
+  letter-spacing: 4px;
+
+  color: #70471f;
+
+  font-weight: 800;
+}
+
+
+/* ACTION */
+
+.promise-actions {
+
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  justify-content: center;
+
+  margin-bottom: 45px;
+}
+
+
+.add-promise-btn {
+
+  border: none;
+
+  padding: 13px 23px;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffd166,
+      #f6a85f
+    );
+
+  color: #18202a;
+
+  font-weight: 700;
+
+  font-size: .95rem;
+
+  box-shadow:
+    0 10px 30px
+    rgba(255,190,100,.20);
+}
+
+
+/* WALL */
+
+.promise-wall {
+
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1100px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(250px, 1fr)
+    );
+
+  gap: 28px;
+
+  align-items: start;
+}
+
+.promise-wall::before {
+
+  content: "✦";
+
+  position: absolute;
+
+  top: -35px;
+
+  left: 8%;
+
+  font-size: 1.2rem;
+
+  color:
+    rgba(80,50,25,.28);
+
+  transform: rotate(-15deg);
+
+}
+
+
+.promise-wall::after {
+
+  content: "✧";
+
+  position: absolute;
+
+  right: 7%;
+
+  bottom: -35px;
+
+  font-size: 1.4rem;
+
+  color:
+    rgba(80,50,25,.25);
+
+  transform: rotate(12deg);
+
+}
+
+
+/* CARD */
+
+.promise-card {
+
+  min-height: 210px;
+
+  padding: 28px 25px 22px;
+
+  position: relative;
+
+  box-sizing: border-box;
+
+  border-radius: 5px;
+
+  color: #25303a;
+
+  /*
+    PAPER
+  */
+
+  box-shadow:
+
+    0 8px 12px
+    rgba(40,25,10,.18),
+
+    0 18px 30px
+    rgba(40,25,10,.12);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+
+  overflow: visible;
+}
+
+.promise-card:hover {
+
+  transform:
+    translateY(-8px)
+    rotate(0deg);
+
+  box-shadow:
+    0 25px 45px
+    rgba(0,0,0,.32);
+}
+
+
+/* CARD COLORS */
+
+.promise-card.gold {
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffe9ad,
+      #fbd98c
+    );
+}
+
+
+.promise-card.yellow {
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff2ad,
+      #ffe18b
+    );
+}
+
+
+.promise-card.blue {
+
+  background:
+    linear-gradient(
+      135deg,
+      #cde8f7,
+      #acd5ed
+    );
+}
+
+
+.promise-card.purple {
+
+  background:
+    linear-gradient(
+      135deg,
+      #ead9f7,
+      #d8bde9
+    );
+}
+
+
+/* PIN */
+
+.promise-pin {
+
+  position: absolute;
+
+  top: -14px;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  width: 22px;
+
+  height: 22px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: .85rem;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #fff7d1,
+      #e7a84c 45%,
+      #9b5d20 100%
+    );
+
+  border:
+    2px solid
+    rgba(90,50,20,.45);
+
+  box-shadow:
+
+    0 3px 5px
+    rgba(30,18,8,.35),
+
+    inset 0 1px 2px
+    rgba(255,255,255,.7);
+
+  z-index: 5;
+
+}
+
+/* TEXT */
+
+.promise-text {
+
+  margin: 20px 0 25px;
+
+  font-family:
+    "Segoe Print",
+    "Bradley Hand",
+    "Comic Sans MS",
+    cursive;
+
+  font-size: 1.02rem;
+
+  line-height: 1.7;
+
+  color: #30251c;
+
+  text-shadow:
+    0 1px 0
+    rgba(255,255,255,.3);
+}
+
+
+/* FOOTER */
+
+.promise-footer {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: .8rem;
+}
+
+
+.promise-footer span {
+
+  font-weight: 700;
+
+  opacity: .7;
+}
+
+
+.promise-footer button {
+
+  border: none;
+
+  background:
+    rgba(0,0,0,.08);
+
+  color: inherit;
+
+  border-radius: 15px;
+
+  padding: 6px 10px;
+
+  cursor: pointer;
+
+  font-size: .72rem;
+
+  transition: .2s;
+}
+
+
+.promise-footer button:hover {
+
+  background:
+    rgba(0,0,0,.15);
+}
+
+
+/* FULFILLED */
+
+.promise-card.fulfilled {
+
+  opacity: .9;
+
+  filter:
+    saturate(.85);
+
+  box-shadow:
+
+    0 8px 12px
+    rgba(40,25,10,.14),
+
+    0 0 0 2px
+    rgba(72,110,65,.18),
+
+    0 18px 35px
+    rgba(40,25,10,.10);
+
+}
+
+
+.promise-card.fulfilled::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 8px;
+
+  border:
+    1px dashed
+    rgba(55,100,55,.22);
+
+  pointer-events: none;
+
+  border-radius: 3px;
+
+}
+
+
+.fulfilled-stamp {
+
+  position: absolute;
+
+  right: 12px;
+
+  top: 45px;
+
+  padding: 7px 10px;
+
+  border: 2px solid #39734b;
+
+  color: #39734b;
+
+  font-size: .65rem;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  transform: rotate(-8deg);
+
+  opacity: .85;
+}
+
+
+/* FORM OVERLAY */
+
+.promise-form-overlay {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px;
+
+  background:
+    rgba(3,10,18,.72);
+
+  backdrop-filter:
+    blur(12px);
+}
+
+
+/* FORM */
+
+.promise-form {
+
+  width: min(
+    500px,
+    100%
+  );
+
+  padding: 35px;
+
+  position: relative;
+
+  box-sizing: border-box;
+
+  border-radius: 25px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #182c3e,
+      #0f1c2a
+    );
+
+  border:
+    1px solid
+    rgba(255,255,255,.12);
+
+  box-shadow:
+    0 30px 80px
+    rgba(0,0,0,.45);
+
+  color: white;
+}
+
+
+.close-form {
+
+  position: absolute;
+
+  top: 15px;
+
+  right: 18px;
+
+  border: none;
+
+  background: transparent;
+
+  color: rgba(255,255,255,.6);
+
+  font-size: 1.7rem;
+
+  cursor: pointer;
+}
+
+
+.promise-form h2 {
+
+  margin:
+    0 0 8px;
+
+  font-size: 1.8rem;
+}
+
+
+.promise-form > p {
+
+  margin:
+    0 0 25px;
+
+  color:
+    rgba(255,255,255,.6);
+
+  line-height: 1.5;
+}
+
+
+.promise-form textarea {
+
+  width: 100%;
+
+  min-height: 130px;
+
+  resize: vertical;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  border-radius: 15px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.12);
+
+  background:
+    rgba(255,255,255,.06);
+
+  color: white;
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: .95rem;
+}
+
+
+.promise-form textarea::placeholder {
+
+  color:
+    rgba(255,255,255,.35);
+}
+
+
+/* FROM */
+
+.promise-from {
+
+  margin:
+    20px 0;
+}
+
+
+.promise-from > span {
+
+  display: block;
+
+  margin-bottom: 10px;
+
+  color:
+    rgba(255,255,255,.6);
+
+  font-size: .85rem;
+}
+
+
+.promise-from > div {
+
+  display: flex;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+}
+
+
+.promise-from button {
+
+  border:
+    1px solid
+    rgba(255,255,255,.14);
+
+  background:
+    rgba(255,255,255,.05);
+
+  color:
+    rgba(255,255,255,.7);
+
+  padding:
+    8px 14px;
+
+  border-radius: 20px;
+
+  cursor: pointer;
+}
+
+
+.promise-from button.selected {
+
+  background:
+    #ffd166;
+
+  color:
+    #17212b;
+
+  border-color:
+    #ffd166;
+
+  font-weight: 700;
+}
+
+
+/* SAVE */
+
+.save-promise {
+
+  width: 100%;
+
+  border: none;
+
+  padding: 13px;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffd166,
+      #f6a85f
+    );
+
+  color:
+    #17212b;
+
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+
+/* EMPTY */
+
+.empty-promises {
+
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+
+  color:
+    rgba(255,255,255,.55);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .promise-page {
+
+    padding:
+      45px 16px 70px;
+  }
+
+  .promise-header {
+
+    margin-bottom: 30px;
+  }
+
+  .promise-header h1 {
+
+    font-size: 2.2rem;
+  }
+
+  .promise-wall {
+
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .promise-card {
+
+    min-height: 190px;
+  }
+
+  .promise-form {
+
+    padding:
+      30px 20px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .promise-page {
+
+    padding:
+      45px 16px 70px;
+  }
+
+  .promise-header h1 {
+
+    font-size: 2.2rem;
+  }
+
+  .promise-wall {
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .promise-card {
+
+    min-height: 190px;
+  }
+
+}
+
+/* =========================================
+   PROMISE CELEBRATION
+========================================= */
+
+.promise-celebration {
+
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  pointer-events: none;
+
+  z-index: 20;
+
+  font-size: 1.7rem;
+
+}
+
+
+.promise-celebration span {
+
+  position: absolute;
+
+  animation:
+    promisePop 1.6s ease-out forwards;
+
+}
+
+
+.promise-celebration span:nth-child(1) {
+
+  transform:
+    translate(-75px, -35px);
+
+}
+
+
+.promise-celebration span:nth-child(2) {
+
+  transform:
+    translate(70px, -20px);
+
+}
+
+
+.promise-celebration span:nth-child(3) {
+
+  transform:
+    translate(-55px, 50px);
+
+}
+
+
+.promise-celebration span:nth-child(4) {
+
+  transform:
+    translate(55px, 45px);
+
+}
+
+
+.promise-celebration span:nth-child(5) {
+
+  transform:
+    translate(0, -70px);
+
+}
+
+
+@keyframes promisePop {
+
+  0% {
+
+    opacity: 0;
+
+    scale: .3;
+
+  }
+
+  25% {
+
+    opacity: 1;
+
+    scale: 1.2;
+
+  }
+
+  100% {
+
+    opacity: 0;
+
+    scale: .8;
+
+    transform:
+      translate(
+        var(--x, 0),
+        var(--y, -100px)
+      );
+
+  }
+
+}
+
+.promise-footer button.fulfilled-button {
+
+  background:
+    rgba(55,110,65,.15);
+
+  color:
+    #37683d;
+
+  font-weight: 700;
+
+}

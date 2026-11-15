@@ -1,0 +1,506 @@
+/* =========================================
+   EASTER EGG PAGE
+========================================= */
+
+.easter-page {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(255, 190, 120, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      145deg,
+      #081522,
+      #102b43,
+      #07121f
+    );
+
+  color: white;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+.easter-glow {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 202, 130, 0.08),
+      transparent 70%
+    );
+
+  filter: blur(10px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.easter-container {
+  width: min(700px, 100%);
+
+  min-height: 500px;
+
+  padding: 55px 45px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  position: relative;
+  z-index: 2;
+
+  box-sizing: border-box;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.10),
+      rgba(255,255,255,.045)
+    );
+
+  border: 1px solid rgba(255,255,255,.14);
+
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.35),
+    inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+
+/* =========================================
+   SMALL TITLE
+========================================= */
+
+.easter-small-title {
+  margin: 0 0 18px;
+
+  font-size: .78rem;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  color: #f6c98d;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   MAIN ICON
+========================================= */
+
+.easter-container > h1 {
+  margin: 5px 0 12px;
+
+  font-size: 4rem;
+
+  line-height: 1;
+
+  filter:
+    drop-shadow(
+      0 8px 20px rgba(255,255,255,.15)
+    );
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.easter-container h2 {
+  margin: 0;
+
+  font-size: 2.1rem;
+
+  font-weight: 700;
+
+  color: #fff;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.easter-description {
+  margin: 18px 0 30px;
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+
+  color: rgba(255,255,255,.78);
+}
+
+
+/* =========================================
+   CLUE PROGRESS
+========================================= */
+
+.clue-progress {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  margin: 10px 0 12px;
+}
+
+
+.clue-dot {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.07);
+
+  border: 1px solid rgba(255,255,255,.16);
+
+  color: rgba(255,255,255,.4);
+
+  font-size: 1.1rem;
+
+  transition:
+    all .3s ease;
+}
+
+
+.clue-dot.found {
+  background:
+    linear-gradient(
+      135deg,
+      #ffd166,
+      #ff8fa3
+    );
+
+  color: #17212b;
+
+  border-color: transparent;
+
+  box-shadow:
+    0 0 25px rgba(255,190,100,.35);
+}
+
+
+/* =========================================
+   PROGRESS TEXT
+========================================= */
+
+.progress-text {
+  margin: 0 0 25px;
+
+  color: rgba(255,255,255,.55);
+
+  font-size: .9rem;
+}
+
+
+/* =========================================
+   FOUND CLUES
+========================================= */
+
+.found-clues {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+}
+
+
+.found-clue {
+  width: 100%;
+
+  padding: 15px 18px;
+
+  box-sizing: border-box;
+
+  border-radius: 16px;
+
+  background: rgba(255,255,255,.06);
+
+  border: 1px solid rgba(255,255,255,.10);
+
+  text-align: left;
+}
+
+
+.found-clue span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #ffd98e;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+.found-clue small {
+  color: rgba(255,255,255,.62);
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   BOTTOM NOTE
+========================================= */
+
+.easter-note {
+  margin: 0;
+
+  color: rgba(255,255,255,.42);
+
+  font-size: .88rem;
+
+  line-height: 1.7;
+}
+
+
+.easter-note span {
+  color: rgba(255,255,255,.65);
+}
+
+
+/* =========================================
+   SECRET REWARD
+========================================= */
+
+.easter-reward {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+.secret-symbol {
+  width: 85px;
+  height: 85px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 2.4rem;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,211,130,.25),
+      rgba(255,211,130,.03)
+    );
+
+  border: 1px solid
+    rgba(255,211,130,.35);
+
+  color: #ffd58a;
+
+  box-shadow:
+    0 0 45px
+    rgba(255,197,110,.22);
+
+  margin-bottom: 25px;
+}
+
+
+.secret-label {
+  margin: 0 0 10px;
+
+  font-size: .75rem;
+
+  letter-spacing: 4px;
+
+  font-weight: 700;
+
+  color: #ffd58a;
+}
+
+
+.easter-reward h1 {
+  margin: 0 0 20px;
+
+  font-size: 2.8rem;
+
+  color: #fff;
+}
+
+
+.secret-message {
+  max-width: 520px;
+
+  margin: 0 auto 30px;
+
+  color: rgba(255,255,255,.78);
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   SECRET NOTE CARD
+========================================= */
+
+.secret-note {
+  width: min(500px, 100%);
+
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,211,145,.12),
+      rgba(255,255,255,.05)
+    );
+
+  border: 1px solid
+    rgba(255,211,145,.18);
+}
+
+
+.secret-note span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: .78rem;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  color: #ffd58a;
+}
+
+
+.secret-note p {
+  margin: 0;
+
+  color: rgba(255,255,255,.82);
+
+  line-height: 1.8;
+
+  font-size: 1rem;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .easter-page {
+    min-height: 100dvh;
+
+    padding: 20px 14px;
+  }
+
+  .easter-container {
+    min-height: 0;
+
+    padding: 40px 22px;
+
+    border-radius: 24px;
+  }
+
+  .easter-small-title {
+    font-size: .65rem;
+
+    letter-spacing: 2.5px;
+  }
+
+  .easter-container > h1 {
+    font-size: 3.2rem;
+  }
+
+  .easter-container h2 {
+    font-size: 1.65rem;
+  }
+
+  .easter-description {
+    font-size: .92rem;
+  }
+
+  .clue-progress {
+    gap: 12px;
+  }
+
+  .clue-dot {
+    width: 40px;
+    height: 40px;
+  }
+
+  .easter-reward h1 {
+    font-size: 2.1rem;
+  }
+
+  .secret-message {
+    font-size: .95rem;
+  }
+
+}

@@ -1,0 +1,115 @@
+.hidden-clue-wrapper{
+position:relative;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+}
+
+.hidden-clue{
+width:20px;
+height:20px;
+
+padding:0;
+
+border:none;
+outline:none;
+
+border-radius:50%;
+
+background:transparent;
+
+color:rgba(255,255,255,.18);
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:
+color .3s ease,
+opacity .3s ease;
+}
+
+.hidden-clue:hover{
+color:rgba(255,255,255,.65);
+}
+
+.hidden-clue.found{
+color:#f7d98b;
+
+text-shadow:
+0 0 10px rgba(247,217,139,.8);
+}
+
+.hidden-clue-popup{
+
+position:absolute;
+
+bottom:28px;
+left:50%;
+
+transform:translateX(-50%);
+
+width:max-content;
+max-width:220px;
+
+padding:9px 13px;
+
+border-radius:10px;
+
+background:rgba(18,18,18,.94);
+
+border:1px solid
+rgba(255,255,255,.1);
+
+color:#fff;
+
+font-size:.75rem;
+
+white-space:nowrap;
+
+z-index:100;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,.25);
+
+pointer-events:none;
+
+}
+
+/* =========================================
+   WHEEL EASTER EGG CLUE
+========================================= */
+
+.wheel-hidden-clue {
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  z-index: 50;
+}
+
+
+/*
+  Keep the clue extremely subtle.
+*/
+
+.wheel-hidden-clue .hidden-clue {
+  width: 24px;
+  height: 24px;
+
+  font-size: 15px;
+
+  color: rgba(255,255,255,.14);
+}
+
+.wheel-hidden-clue .hidden-clue:hover {
+  color: rgba(255,215,150,.65);
+}
+
+.wheel-hidden-clue .hidden-clue.found {
+  color: #ffd58a;
+
+  text-shadow:
+    0 0 12px rgba(255,213,138,.9);
+}

@@ -1,0 +1,344 @@
+/* =========================================
+   BASE MODULE BACKGROUND
+========================================= */
+
+.module-background {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  color: #fff;
+  isolation: isolate;
+}
+
+.background-content {
+  position: relative;
+  z-index: 5;
+  min-height: 100vh;
+}
+
+
+/* =========================================
+   SOFT BACKGROUND LIGHTS
+========================================= */
+
+.background-glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-one {
+  top: -180px;
+  left: -120px;
+}
+
+.glow-two {
+  right: -160px;
+  bottom: -180px;
+}
+
+
+/* =========================================
+   DEFAULT
+========================================= */
+
+.module-default {
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.06),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #0b1d2f,
+      #102b45,
+      #071522
+    );
+}
+
+.module-default .glow-one {
+  background: #7db7ff;
+}
+
+.module-default .glow-two {
+  background: #b58cff;
+}
+
+
+/* =========================================
+   STORY
+========================================= */
+
+.module-story {
+  background:
+    linear-gradient(
+      135deg,
+      #203b36,
+      #152d31,
+      #0d1d2b
+    );
+}
+
+.module-story .glow-one {
+  background: #e6b873;
+}
+
+.module-story .glow-two {
+  background: #83c5be;
+}
+
+
+/* =========================================
+   DAILY MEMORY
+========================================= */
+
+.module-memory {
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(255, 210, 150, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      160deg,
+      #182b3d,
+      #102233,
+      #091521
+    );
+}
+
+.module-memory .glow-one {
+  background: #ffd28a;
+}
+
+.module-memory .glow-two {
+  background: #8db8ff;
+}
+
+
+/* =========================================
+   FUTURE BUCKET LIST
+========================================= */
+
+.module-future {
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 193, 107, 0.14),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #182b48,
+      #14253d,
+      #0b1728
+    );
+}
+
+.module-future .glow-one {
+  background: #ffca7a;
+}
+
+.module-future .glow-two {
+  background: #7ab8ff;
+}
+
+
+/* =========================================
+   WHY MEGHA IS SPECIAL
+========================================= */
+
+.module-special {
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(255, 190, 220, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      145deg,
+      #35233a,
+      #20243c,
+      #101827
+    );
+}
+
+.module-special .glow-one {
+  background: #ff9fc5;
+}
+
+.module-special .glow-two {
+  background: #9ca8ff;
+}
+
+
+/* =========================================
+   HUG SIMULATOR
+========================================= */
+
+.module-hug {
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(255, 211, 170, 0.15),
+      transparent 38%
+    ),
+    linear-gradient(
+      145deg,
+      #3a2b2a,
+      #29303a,
+      #111b27
+    );
+}
+
+.module-hug .glow-one {
+  background: #ffc68f;
+}
+
+.module-hug .glow-two {
+  background: #d89cff;
+}
+
+
+/* =========================================
+   EMERGENCY
+========================================= */
+
+.module-emergency {
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(255, 90, 90, 0.08),
+      transparent 35%
+    ),
+    linear-gradient(
+      145deg,
+      #241c25,
+      #171d2b,
+      #09131e
+    );
+}
+
+.module-emergency .glow-one {
+  background: #ff6b6b;
+}
+
+.module-emergency .glow-two {
+  background: #8d9cff;
+}
+
+
+/* =========================================
+   PROMISE WALL
+========================================= */
+
+.module-promise {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      rgba(255,255,255,0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      145deg,
+      #24364d,
+      #172638,
+      #0c1826
+    );
+
+  background-size:
+    40px 40px,
+    40px 40px,
+    auto;
+}
+
+.module-promise .glow-one {
+  background: #e5c28c;
+}
+
+.module-promise .glow-two {
+  background: #8db5e8;
+}
+
+
+/* =========================================
+   WISH JAR
+========================================= */
+
+.module-wish {
+  background:
+    radial-gradient(
+      circle at 50% 25%,
+      rgba(255, 211, 155, 0.12),
+      transparent 32%
+    ),
+    linear-gradient(
+      145deg,
+      #23394a,
+      #162b3c,
+      #091621
+    );
+}
+
+.module-wish .glow-one {
+  background: #ffd28a;
+}
+
+.module-wish .glow-two {
+  background: #ff9fb8;
+}
+
+
+/* =========================================
+   BROTHER AI
+   (currently paused)
+========================================= */
+
+.module-ai {
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(92, 180, 255, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      145deg,
+      #102b42,
+      #14233a,
+      #08131f
+    );
+}
+
+.module-ai .glow-one {
+  background: #5cb8ff;
+}
+
+.module-ai .glow-two {
+  background: #a080ff;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .background-glow {
+    width: 260px;
+    height: 260px;
+    filter: blur(75px);
+  }
+
+}

@@ -1,0 +1,40 @@
+.effect-layer{
+position:fixed;
+inset:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+z-index:999999;
+}
+
+.effect-item{
+position:absolute;
+top:-80px;
+display:block;
+line-height:1;
+user-select:none;
+pointer-events:none;
+will-change:transform,opacity;
+animation-name:emojiRain;
+animation-timing-function:linear;
+animation-fill-mode:forwards;
+}
+
+@keyframes emojiRain{
+0%{
+transform:translate3d(0,-60px,0) rotate(0deg) scale(.7);
+opacity:0;
+}
+10%{
+opacity:1;
+}
+50%{
+transform:translate3d(calc(var(--drift) * .5),50vh,0) rotate(360deg) scale(1);
+opacity:1;
+}
+100%{
+transform:translate3d(var(--drift),120vh,0) rotate(720deg) scale(.85);
+opacity:0;
+}
+}

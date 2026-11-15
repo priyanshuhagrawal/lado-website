@@ -1,0 +1,935 @@
+/* =====================================================
+   STORY PAGE
+   Same visual language as the original Letter
+===================================================== */
+
+.story-page {
+  min-height: 100vh;
+  width: 100%;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 202, 180, 0.08),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 180, 210, 0.08),
+      transparent 35%
+    ),
+    #0c1b2b;
+
+  color: #2f2f2f;
+
+  padding: 50px 20px;
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.story-intro {
+  min-height: calc(100vh - 100px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  animation: storyFadeUp 1s ease both;
+}
+
+.story-intro-flower {
+  font-size: 34px;
+  margin-bottom: 25px;
+
+  animation: gentleFloat 3s ease-in-out infinite;
+}
+
+.story-intro h1 {
+  margin: 0;
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(42px, 8vw, 72px);
+
+  font-weight: 500;
+
+  color: #fff8ed;
+
+  letter-spacing: -1px;
+}
+
+.story-intro p {
+  margin-top: 25px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.story-scroll {
+  margin-top: 55px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 8px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 14px;
+}
+
+.story-scroll span {
+  font-size: 24px;
+
+  color: #ffd28a;
+
+  animation: scrollArrow 1.8s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   STORY CHAPTER / MAIN CARD
+===================================================== */
+
+.story-chapter {
+  width: min(850px, 100%);
+
+  margin: 0 auto 30px;
+
+  padding: 55px clamp(25px, 6vw, 70px);
+
+  position: relative;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffaf2,
+      #f5eadc
+    );
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.18);
+
+  overflow: hidden;
+
+  color: #2f2f2f;
+
+  animation: storyFadeUp 0.9s ease both;
+}
+
+
+/* decorative warm glow */
+
+.story-chapter::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 180px;
+  height: 180px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 190, 160, 0.25),
+      transparent 65%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CHAPTER NUMBER
+===================================================== */
+
+.story-chapter-number {
+  position: absolute;
+
+  top: 25px;
+  right: 30px;
+
+  font-size: 13px;
+
+  color: #a58c74;
+
+  letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.story-icon {
+  display: block;
+
+  font-size: 32px;
+
+  margin-bottom: 18px;
+
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =====================================================
+   DATE
+===================================================== */
+
+.story-date {
+  margin-bottom: 18px;
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+
+  color: #a58c74;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   HEADINGS
+===================================================== */
+
+.story-chapter h2 {
+  margin: 0 0 25px;
+
+  color: #283d5b;
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(27px, 5vw, 42px);
+
+  font-weight: 500;
+
+  line-height: 1.25;
+}
+
+
+/* =====================================================
+   BODY TEXT
+===================================================== */
+
+.story-chapter > p {
+  font-size: 17px;
+
+  line-height: 1.9;
+
+  color: #4c4a48;
+
+  margin: 0 auto 20px;
+
+  max-width: 680px;
+}
+
+.story-chapter strong {
+  color: #283d5b;
+}
+
+
+/* =====================================================
+   FIRST MEETING CARD
+===================================================== */
+
+.first-meeting-card {
+  width: min(620px, 100%);
+
+  margin: 35px auto;
+
+  padding: 25px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  text-align: left;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f8ead9,
+      #f3dfc5
+    );
+
+  border-radius: 18px;
+
+  border: 1px solid rgba(139, 97, 62, 0.12);
+
+  box-shadow:
+    0 8px 25px rgba(100, 70, 40, 0.08);
+}
+
+.first-meeting-mark {
+  min-width: 75px;
+  height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: #ead1ad;
+
+  color: #795535;
+
+  font-family: Georgia, serif;
+
+  font-size: 2rem;
+}
+
+.first-meeting-card strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #283d5b;
+
+  font-size: 1.15rem;
+}
+
+.first-meeting-card span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #806f5d;
+
+  font-size: 0.92rem;
+}
+
+.story-small-note {
+  font-size: 0.9rem !important;
+
+  color: #8b7b6b !important;
+
+  font-style: italic;
+}
+
+
+/* =====================================================
+   QUOTE
+===================================================== */
+
+.story-quote {
+  width: min(650px, 100%);
+
+  margin: 35px auto 10px;
+
+  padding: 30px 35px;
+
+  position: relative;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.6);
+
+  border-radius: 18px;
+
+  border-left: 4px solid #dca77a;
+
+  text-align: center;
+
+  box-shadow:
+    0 8px 20px rgba(100, 70, 40, 0.06);
+}
+
+.story-quote span {
+  font-family: Georgia, serif;
+
+  font-size: 45px;
+
+  line-height: 20px;
+
+  color: #dca77a;
+}
+
+.story-quote p {
+  margin: 10px 0;
+
+  font-family: Georgia, serif;
+
+  font-style: italic;
+
+  font-size: 20px;
+
+  line-height: 1.8;
+
+  color: #5d5047;
+}
+
+
+/* =====================================================
+   16 MAY PHOTO
+===================================================== */
+
+.story-photo-card {
+  width: min(680px, 100%);
+
+  margin: 35px auto 10px;
+
+  background: #fffdf8;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.14);
+}
+
+.story-photo-card img {
+  width: 100%;
+
+  height: 430px;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.photo-caption {
+  padding: 22px 25px;
+
+  text-align: left;
+}
+
+.photo-caption strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #283d5b;
+
+  font-family: Georgia, serif;
+
+  font-size: 20px;
+}
+
+.photo-caption span {
+  color: #766b61;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   TREK PHOTO
+===================================================== */
+
+.trek-photo {
+  width: min(680px, 100%);
+
+  margin: 35px auto;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.2);
+}
+
+.trek-photo img {
+  width: 100%;
+
+  height: 440px;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.6s ease;
+}
+
+.trek-photo:hover img {
+  transform: scale(1.04);
+}
+
+.trek-overlay {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 35px 20px 20px;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(20, 25, 30, 0.75)
+    );
+
+  color: white;
+
+  text-align: center;
+}
+
+.trek-overlay span {
+  font-family: Georgia, serif;
+
+  font-size: 20px;
+
+  letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   MOUNTAIN + RAKHI MOMENT
+===================================================== */
+
+.mountain-story {
+  margin-top: 35px;
+
+  padding: 35px 25px;
+
+  text-align: center;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #dbe8f1,
+      #f8efe3
+    );
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.mountain {
+  font-size: 65px;
+
+  animation: mountainFloat 3s ease-in-out infinite;
+}
+
+.mountain-divider {
+  width: 70%;
+
+  height: 2px;
+
+  margin: 20px auto;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #9b846d,
+      transparent
+    );
+}
+
+.rakhi {
+  font-size: 42px;
+
+  margin-bottom: 15px;
+}
+
+.mountain-story h3 {
+  margin: 10px 0 15px;
+
+  color: #283d5b;
+
+  font-family: Georgia, serif;
+
+  font-size: 28px;
+}
+
+.mountain-story p {
+  max-width: 600px;
+
+  margin: 0 auto 10px;
+
+  font-family: Georgia, serif;
+
+  font-size: 21px;
+
+  color: #3f4c5d;
+}
+
+.mountain-story span {
+  color: #817366;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   RELATIONSHIP CLOUD
+===================================================== */
+
+.relationship-cloud {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+.relationship-cloud span {
+  padding: 11px 18px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  border-radius: 999px;
+
+  color: #4e5968;
+
+  font-size: 14px;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.07);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.relationship-cloud span:hover {
+  transform: translateY(-4px);
+
+  background: #f3dfc5;
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.story-timeline {
+  margin-top: 35px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+.story-timeline div {
+  min-width: 120px;
+
+  padding: 18px 14px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.65);
+
+  border: 1px solid rgba(139, 97, 62, 0.12);
+
+  box-shadow:
+    0 5px 15px rgba(100, 70, 40, 0.06);
+}
+
+.story-timeline strong {
+  color: #805b3d;
+
+  font-size: 0.95rem;
+}
+
+.story-timeline span {
+  color: #8c7a67;
+
+  font-size: 0.75rem;
+}
+
+.story-timeline i {
+  color: #b58b62;
+
+  font-style: normal;
+
+  font-size: 1.2rem;
+}
+
+
+/* =====================================================
+   ENDING
+===================================================== */
+
+.story-ending {
+  width: min(850px, 100%);
+
+  min-height: 65vh;
+
+  margin: 30px auto 0;
+
+  padding: 80px 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+.ending-stars {
+  margin-bottom: 25px;
+
+  color: #e6c98f;
+
+  font-size: 1.2rem;
+}
+
+.story-ending h2 {
+  margin: 0;
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(2.3rem, 6vw, 4rem);
+
+  font-weight: 500;
+
+  color: #fff8ed;
+}
+
+.story-ending p {
+  max-width: 550px;
+
+  margin-top: 25px;
+
+  line-height: 1.9;
+
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.story-signature {
+  margin-top: 45px;
+
+  font-family: Georgia, serif;
+
+  font-size: 1.2rem;
+
+  color: #e6c98f;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes storyFadeUp {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+@keyframes gentleFloat {
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-8px);
+  }
+}
+
+@keyframes scrollArrow {
+  0%,
+  100% {
+    transform:
+      translateY(0);
+
+    opacity: 0.4;
+  }
+
+  50% {
+    transform:
+      translateY(8px);
+
+    opacity: 1;
+  }
+}
+
+@keyframes mountainFloat {
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-8px);
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .story-page {
+    padding: 30px 14px;
+  }
+
+
+  .story-intro {
+    min-height: 75vh;
+  }
+
+
+  .story-intro h1 {
+    font-size: clamp(40px, 13vw, 60px);
+  }
+
+
+  .story-intro p {
+    font-size: 15px;
+  }
+
+
+  .story-chapter {
+    padding:
+      50px 22px;
+
+    margin-bottom: 25px;
+
+    border-radius: 20px;
+  }
+
+
+  .story-chapter-number {
+    top: 18px;
+    right: 20px;
+  }
+
+
+  .story-chapter > p {
+    font-size: 1rem;
+
+    line-height: 1.85;
+  }
+
+
+  .first-meeting-card {
+    padding: 18px;
+
+    gap: 15px;
+  }
+
+
+  .first-meeting-mark {
+    min-width: 60px;
+
+    height: 60px;
+
+    font-size: 1.5rem;
+  }
+
+
+  .story-quote {
+    padding:
+      25px 20px;
+  }
+
+
+  .story-photo-card img {
+    height: 300px;
+  }
+
+
+  .trek-photo img {
+    height: 330px;
+  }
+
+
+  .mountain-story {
+    padding:
+      25px 18px;
+  }
+
+
+  .story-timeline {
+    flex-direction: column;
+  }
+
+
+  .story-timeline i {
+    transform:
+      rotate(90deg);
+  }
+
+
+  .story-timeline div {
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+
+  .story-ending {
+    min-height: 55vh;
+
+    padding:
+      60px 15px;
+  }
+
+}
